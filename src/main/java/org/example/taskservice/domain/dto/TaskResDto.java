@@ -19,18 +19,25 @@ import java.util.List;
 public class TaskResDto {
     @Schema(description = "Заголовок задачи")
     private String header;
+
     @Schema(description = "Описание задачи")
     private String description;
+
     @Schema(description = "Статус задачи", example = "PENDING/PROGRESS/COMPLETED")
     private TaskStatus taskStatus;
+
     @Schema(description = "Приоритет выполнения задачи", example = "LOW/MIDDLE/HIGH")
     private TaskPriority taskPriority;
+
     @Schema(description = "Email автора задачи")
     private PersonDto author;
+
     @Schema(description = "Email исполнителя задачи")
     private PersonDto performer;
+
     @Schema(description = "Комментарии под задачей")
     private List<CommentResDto> comments;
+
     @Schema(description = "Дата создания задачи")
     private LocalDateTime creationDate;
 
